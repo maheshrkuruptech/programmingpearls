@@ -60,3 +60,12 @@ Further educate yourself about the problem than trying to solve it.
     ##### But what if you were given a word and dictionary and have to look-up anagrams?!
     Sort , Binary Search  and signature. 
    
+   
+     Create empty hashmap H
+     For each word in dictionary of length same as input:
+      Create a key that is the word's letters sorted alphabetically (and forced to one case)
+      Add the word to the list of words accessed by the hash key in H
+  To check for all anagrams of a given word:
+      Create a key that is the letters of the word, sorted (and forced to one case)
+      Look up that key in H
+      You now have a list of all anagrams

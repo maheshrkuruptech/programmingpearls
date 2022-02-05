@@ -29,6 +29,34 @@ Further educate yourself about the problem than trying to solve it.
  If there is ample memory , we could try with bitmap technique too. 
 
 ### Rotate a one dimentional vector of size n  by i positions
-     
+    This problem arise in various guises. Some language provide rotation as primitive operation. Rotation means swapping adjacemtn blocks of unequal size (like a drag n drop in 
+    document editor).
+    abcdefgh ; n = 8 ; i = 3
+    mouse and;  n = 9 ,  i = 6
+    ouse mand
+    
+    #### Approach 1
+    consider it as two segments in a vector and then do a swap 
+    ```
+    abc defgh
+    if vector b is greater in size than a  , split to bl and br - left and right ; right is same in length as a 
+    abc de fgh -> fgh de abc -> fgh de -> f de  -> edf -> de
+    ```
+    #### Approach 2
+    View it as transforming an array from ab to ba. Involves a(reverse)*b ; a(reverse)*b(reverse) ; (a(reverse)*b(reverse))(reverse). 
+    ```
+    cba defgh (reverse A) reverse(0,i)
+    cba hgfed (reverse B) reverse(i ,n)
+    defghabc  (whole reverse) reverse (0 , n-1)
+    ```
 ### Given a dictionary of words , find all anagrams. 
-
+Should be very efficient since the string length (factorial) words , say x should be compared against dictionary. 
+   So total time is x *  x comparisons * time taken for 1 comparison
+    #### Appproach 
+    Words in anagram class has same signature.So bring together the words with same signature.
+    
+    This makes problem to 2 sub problem. 1. Create a signature. 2. Collect words with same signature. 
+   
+   ##### But what if you were given a word and dictionary and have to look-up anagrams?!
+   Sort , Binary Search  and signature. 
+   

@@ -58,8 +58,7 @@ Further educate yourself about the problem than trying to solve it.
     This makes problem to 2 sub problem. 1. Create a signature. 2. Collect words with same signature. 
    
     ##### But what if you were given a word and dictionary and have to look-up anagrams?!
-    Sort , Binary Search  and signature. 
-   
+    If pre-processing is allowed , then   compute the signature and sort the dictionary words. Then do a binary search.
    
      Create empty hashmap H
      For each word in dictionary of length same as input:
